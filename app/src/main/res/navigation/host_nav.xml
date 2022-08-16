@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_fragment"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.shoestore.Screens.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeOnboardingFragment"
+            app:destination="@id/welcomeOnboardingFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_loginFragment_to_shoeListingFragment"
+            app:destination="@id/shoeListingFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right">
+            <argument
+                android:name="flag"
+                android:defaultValue="false" />
+            <argument
+                android:name="name"
+                android:defaultValue="n" />
+            <argument
+                android:name="company"
+                android:defaultValue="c" />
+            <argument
+                android:name="description"
+                android:defaultValue="d" />
+            <argument
+                android:name="size"
+                android:defaultValue="s" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeOnboardingFragment"
+        android:name="com.example.shoestore.Screens.OnBoarding.WelcomeOnboardingFragment"
+        android:label="fragment_welcome_onboarding"
+        tools:layout="@layout/fragment_welcome_onboarding">
+        <action
+            android:id="@+id/action_welcomeOnboardingFragment_to_instructionsOnboardingFragment"
+            app:destination="@id/instructionsOnboardingFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionsOnboardingFragment"
+        android:name="com.example.shoestore.Screens.OnBoarding.InstructionsOnboardingFragment"
+        android:label="fragment_instructions_onboarding"
+        tools:layout="@layout/fragment_instructions_onboarding">
+        <action
+            android:id="@+id/action_instructionsOnboardingFragment_to_shoeListingFragment"
+            app:destination="@id/shoeListingFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right">
+            <argument
+                android:name="flag"
+                android:defaultValue="false" />
+            <argument
+                android:name="name"
+                android:defaultValue="n" />
+            <argument
+                android:name="company"
+                android:defaultValue="c" />
+            <argument
+                android:name="description"
+                android:defaultValue="d" />
+            <argument
+                android:name="size"
+                android:defaultValue="s" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/shoeListingFragment"
+        android:name="com.example.shoestore.Screens.ShoeListingFragment"
+        android:label="fragment_shoe_listing"
+        tools:layout="@layout/fragment_shoe_listing">
+        <action
+            android:id="@+id/action_shoeListingFragment_to_shoeDetailFragmnet"
+            app:destination="@id/shoeDetailFragmnet"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+
+        <argument
+            android:name="flag"
+            app:argType="boolean" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="company"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+        <argument
+            android:name="size"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetailFragmnet"
+        android:name="com.example.shoestore.Screens.ShoeDetailFragment"
+        android:label="fragment_shoe_detail_fragmnet"
+        tools:layout="@layout/fragment_shoe_detail_fragment">
+        <action
+            android:id="@+id/action_shoeDetailFragmnet_to_shoeListingFragment"
+            app:destination="@id/shoeListingFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true">
+
+        </action>
+    </fragment>
+</navigation>

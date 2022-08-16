@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Shoe Store</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pas_hint">Enter Your Password</string>
+    <string name="hint_email">Enter Your Email</string>
+    <string name="login">Login</string>
+    <string name="password">Password :</string>
+    <string name="email">Email :</string>
+    <string name="new_login">New Login</string>
+    <string name="description">Description :</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="size">Size :</string>
+    <string name="shoe_description">Shoe Description</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="shoe_company">Shoe Company</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="name">Name :</string>
+    <string name="company">Company :</string>
+    <string name="_1_click_on_add">1. Click on add</string>
+    <string name="to_add_a_shoe">To Add a Shoe</string>
+    <string name="_2_enter_the_shoe_name_company_size_and_describe_what_you_want">2. Enter The shoe name, company, size and describe what you want</string>
+    <string name="_3_click_save_to_save_or_cancel_for_back_to_list_without_saving">3. Click save to save or cancel for back to list without saving</string>
+    <string name="let_s_start">Let\'s Start</string>
+    <string name="instructions">Instructions</string>
+    <string name="please_follow_the_instructions">please follow the instructions</string>
+</resources>

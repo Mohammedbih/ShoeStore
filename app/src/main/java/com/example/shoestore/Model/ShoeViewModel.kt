@@ -12,7 +12,7 @@ class ShoeViewModel : ViewModel() {
 
 
     fun add(shoe: Shoe?) {
-        if (shoe != null) {
+        if (shoe == null) {
             shoes.value?.add(shoe)
         }
     }

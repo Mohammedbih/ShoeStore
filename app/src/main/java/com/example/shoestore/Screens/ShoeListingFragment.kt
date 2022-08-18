@@ -3,10 +3,10 @@ package com.example.shoestore.Screens
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.*
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.shoestore.R
 import com.example.shoestore.databinding.FragmentShoeListingBinding
 import com.example.shoestore.databinding.ShoeItemBinding
@@ -22,6 +22,7 @@ class ShoeListingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentShoeListingBinding.inflate(inflater, container, false)
+
         return binding.root
     }
 
@@ -39,7 +40,16 @@ class ShoeListingFragment : Fragment() {
             view.findNavController()
                 .navigate(R.id.action_shoeListingFragment_to_shoeDetailFragmnet)
         }
-
+        binding.apply {
+            toolBar.inflateMenu(R.menu.logout_menu)
+            toolBar.setOnMenuItemClickListener {
+                if (it.itemId == R.id.btn_logout) {
+                    findNavController().navigate(R.id.action_shoeListingFragment_to_loginFragment2)
+                    //Clear BackStack
+                    true
+                } else false
+            }
+        }
     }
 
     @SuppressLint("InflateParams")

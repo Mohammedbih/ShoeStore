@@ -18,11 +18,9 @@ class ShoeDetailFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentShoeDetailFragmentBinding
             .inflate(inflater, container, false)
-        setMenuVisibility(false)
-
 
         return binding.root
     }

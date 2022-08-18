@@ -22,24 +22,10 @@
             app:destination="@id/shoeListingFragment"
             app:enterAnim="@anim/from_left"
             app:exitAnim="@anim/to_right"
+            app:launchSingleTop="false"
             app:popEnterAnim="@anim/from_left"
-            app:popExitAnim="@anim/to_right">
-            <argument
-                android:name="flag"
-                android:defaultValue="false" />
-            <argument
-                android:name="name"
-                android:defaultValue="n" />
-            <argument
-                android:name="company"
-                android:defaultValue="c" />
-            <argument
-                android:name="description"
-                android:defaultValue="d" />
-            <argument
-                android:name="size"
-                android:defaultValue="s" />
-        </action>
+            app:popExitAnim="@anim/to_right"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/welcomeOnboardingFragment"
@@ -65,23 +51,9 @@
             app:enterAnim="@anim/from_left"
             app:exitAnim="@anim/to_right"
             app:popEnterAnim="@anim/from_left"
-            app:popExitAnim="@anim/to_right">
-            <argument
-                android:name="flag"
-                android:defaultValue="false" />
-            <argument
-                android:name="name"
-                android:defaultValue="n" />
-            <argument
-                android:name="company"
-                android:defaultValue="c" />
-            <argument
-                android:name="description"
-                android:defaultValue="d" />
-            <argument
-                android:name="size"
-                android:defaultValue="s" />
-        </action>
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/shoeListingFragment"
+            app:popUpToInclusive="true"></action>
     </fragment>
     <fragment
         android:id="@+id/shoeListingFragment"
@@ -95,22 +67,13 @@
             app:exitAnim="@anim/to_right"
             app:popEnterAnim="@anim/from_left"
             app:popExitAnim="@anim/to_right" />
-
-        <argument
-            android:name="flag"
-            app:argType="boolean" />
-        <argument
-            android:name="name"
-            app:argType="string" />
-        <argument
-            android:name="company"
-            app:argType="string" />
-        <argument
-            android:name="description"
-            app:argType="string" />
-        <argument
-            android:name="size"
-            app:argType="string" />
+        <action
+            android:id="@+id/action_shoeListingFragment_to_loginFragment2"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
 
     </fragment>
     <fragment
@@ -125,7 +88,7 @@
             app:exitAnim="@anim/to_right"
             app:popEnterAnim="@anim/from_left"
             app:popExitAnim="@anim/to_right"
-            app:popUpTo="@id/loginFragment"
+            app:popUpTo="@id/shoeListingFragment"
             app:popUpToInclusive="true">
 
         </action>

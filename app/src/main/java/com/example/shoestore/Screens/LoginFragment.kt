@@ -20,12 +20,9 @@ class LoginFragment : Fragment(),View.OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        setMenuVisibility(false)
 
         binding = FragmentLoginBinding.inflate(inflater, container, false)
-
-
-
-
         return binding.root
     }
 

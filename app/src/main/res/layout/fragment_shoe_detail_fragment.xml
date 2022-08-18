@@ -1,197 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#2B3E42"
-    android:orientation="vertical"
-    tools:context=".Screens.ShoeDetailFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="84dp"
-        android:layout_height="84dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/shoe_icon2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
-    <!--Name-->
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:fontFamily="serif"
-        android:text="@string/name"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/et_name"
-        app:layout_constraintStart_toStartOf="@+id/et_name" />
+        <variable
+            name="shoe"
+            type="com.example.shoestore.models.ShoeViewModel" />
+    </data>
 
-    <!--Company-->
-
-    <EditText
-        android:id="@+id/et_name"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="24dp"
-        android:fontFamily="serif"
-        android:hint="@string/shoe_name"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:paddingStart="16dp"
-        android:textColor="@color/white"
-        android:textColorHint="#CDC9C9"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.533"
-        tools:ignore="RtlSymmetry" />
+        android:layout_height="match_parent"
+        android:background="#2B3E42"
+        android:orientation="vertical"
+        tools:context=".Screens.ShoeDetailFragment">
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:fontFamily="serif"
-        android:text="@string/company"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/et_compane"
-        app:layout_constraintStart_toStartOf="@+id/et_compane" />
 
-    <!--    Size-->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/shoe_icon2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/et_compane"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="24dp"
-        android:fontFamily="serif"
-        android:hint="@string/shoe_company"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:paddingStart="16dp"
-        android:textColor="@color/white"
-        android:textColorHint="#CDC9C9"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="RtlSymmetry" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:fontFamily="serif"
-        android:text="@string/size"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/et_size"
-        app:layout_constraintStart_toStartOf="@+id/et_size" />
-
-    <!--    Description-->
-
-    <EditText
-        android:id="@+id/et_size"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="24dp"
-        android:fontFamily="serif"
-        android:hint="@string/shoe_size"
-        android:inputType="numberDecimal"
-        android:minHeight="48dp"
-        android:paddingStart="16dp"
-        android:textColor="@color/white"
-        android:textColorHint="#CDC9C9"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="RtlSymmetry" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:fontFamily="serif"
-        android:text="@string/description"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/et_desciption"
-        app:layout_constraintStart_toStartOf="@+id/et_desciption" />
-
-    <EditText
-        android:id="@+id/et_desciption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="76dp"
-        android:fontFamily="serif"
-        android:hint="@string/shoe_description"
-        android:maxLines="1"
-        android:minHeight="48dp"
-        android:paddingStart="16dp"
-        android:textColor="@color/white"
-        android:textColorHint="#CDC9C9"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="RtlSymmetry" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="0dp">
-        <!--    Buttons-->
-
-        <Button
-            android:id="@+id/save_btn"
-            android:layout_width="122dp"
+        <!--Name-->
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
-            android:backgroundTint="#A46CCD"
+            android:layout_marginStart="6dp"
             android:fontFamily="serif"
-            android:text="@string/save"
-            android:textSize="14sp"
-            tools:targetApi="lollipop" />
+            android:text="@string/name"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/et_name"
+            app:layout_constraintStart_toStartOf="@+id/et_name" />
 
-        <Button
-            android:id="@+id/cancel_btn"
-            android:layout_width="130dp"
+        <!--Company-->
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
-            android:backgroundTint="#455195"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="24dp"
             android:fontFamily="serif"
-            android:text="@string/cancel"
+            android:hint="@string/shoe_name"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingStart="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="#CDC9C9"
             android:textSize="14sp"
-            tools:targetApi="lollipop" />
-    </LinearLayout>
+            app:layout_constraintBottom_toTopOf="@+id/textView9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.533"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="serif"
+            android:text="@string/company"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/et_company"
+            app:layout_constraintStart_toStartOf="@+id/et_company" />
+
+        <!--    Size-->
+
+        <EditText
+            android:id="@+id/et_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="serif"
+            android:hint="@string/shoe_company"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingStart="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="#CDC9C9"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="serif"
+            android:text="@string/size"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/et_size"
+            app:layout_constraintStart_toStartOf="@+id/et_size" />
+
+        <!--    Description-->
+
+        <EditText
+            android:id="@+id/et_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="serif"
+            android:hint="@string/shoe_size"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:paddingStart="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="#CDC9C9"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="serif"
+            android:text="@string/description"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/et_desciption"
+            app:layout_constraintStart_toStartOf="@+id/et_desciption" />
+
+        <EditText
+            android:id="@+id/et_desciption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="76dp"
+            android:fontFamily="serif"
+            android:hint="@string/shoe_description"
+            android:maxLines="1"
+            android:minHeight="48dp"
+            android:paddingStart="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="#CDC9C9"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="72dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="0dp">
+            <!--    Buttons-->
+
+            <Button
+                android:id="@+id/save_btn"
+                android:layout_width="122dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:backgroundTint="#A46CCD"
+                android:fontFamily="serif"
+                android:text="@string/save"
+                android:textSize="14sp"
+                tools:targetApi="lollipop" />
+
+            <Button
+                android:id="@+id/cancel_btn"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:backgroundTint="#455195"
+                android:fontFamily="serif"
+                android:text="@string/cancel"
+                android:textSize="14sp"
+                tools:targetApi="lollipop" />
+        </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

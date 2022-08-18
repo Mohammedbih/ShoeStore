@@ -1,4 +1,4 @@
-package com.example.shoestore.Model
+package com.example.shoestore.models
 
 
 data class Shoe(
@@ -6,5 +6,4 @@ data class Shoe(
     val company: String = "",
     val size: String = "44f",
     val description: String = "",
-    val pic: Int = 0
 )

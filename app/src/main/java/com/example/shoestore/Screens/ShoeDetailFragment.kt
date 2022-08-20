@@ -21,7 +21,6 @@ class ShoeDetailFragment : Fragment() {
     ): View {
         binding = FragmentShoeDetailFragmentBinding
             .inflate(inflater, container, false)
-
         return binding.root
     }
 
@@ -33,14 +32,10 @@ class ShoeDetailFragment : Fragment() {
             //SAVE
             saveBtn.setOnClickListener {
                 val shoeViewModel:ShoeViewModel by activityViewModels()
-                shoeViewModel.add(
-                    Shoe(
-                        etName.text.toString(),
-                        etCompany.text.toString(),
-                        etSize.text.toString(),
-                        etDesciption.text.toString(),
-                    )
-                )
+                //2-Way dataBinding
+                shoe = shoeViewModel
+                lifecycleOwner = this@ShoeDetailFragment
+                shoeViewModel.insert()
 
                 val action = ShoeDetailFragmentDirections
                     .actionShoeDetailFragmnetToShoeListingFragment()

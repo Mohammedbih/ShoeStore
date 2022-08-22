@@ -6,8 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.findNavController
-import com.example.shoestore.models.Shoe
+import androidx.navigation.fragment.findNavController
 import com.example.shoestore.models.ShoeViewModel
 import com.example.shoestore.databinding.FragmentShoeDetailFragmentBinding
 
@@ -35,25 +34,29 @@ class ShoeDetailFragment : Fragment() {
                 //2-Way dataBinding
                 shoe = shoeViewModel
                 lifecycleOwner = this@ShoeDetailFragment
-                shoeViewModel.insert()
+                shoeViewModel.insert(binding.shoe as ShoeViewModel) //ISSUE HERE i think
+//                shoeViewModel.add(Shoe(
+//                    etName.text.toString(),
+//                    etCompany.text.toString(),
+//                    etSize.text.toString(),
+//                    etDesciption.text.toString(),
+//                ))
 
-                val action = ShoeDetailFragmentDirections
-                    .actionShoeDetailFragmnetToShoeListingFragment()
-
-                view.findNavController()
-                    .navigate(action)
+                navigate()
             }
 
             //CANCEL
             cancelBtn.setOnClickListener {
-
-                val action = ShoeDetailFragmentDirections
-                    .actionShoeDetailFragmnetToShoeListingFragment()
-
-                view.findNavController()
-                    .navigate(action)
+                navigate()
             }
         }
+    }
+    private fun navigate(){
+        val action = ShoeDetailFragmentDirections
+            .actionShoeDetailFragmnetToShoeListingFragment()
+
+        findNavController()
+            .navigate(action)
     }
 
 }

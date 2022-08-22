@@ -37,14 +37,15 @@ class ShoeListingFragment : Fragment() {
         }
 
         binding.addFloatingBtn.setOnClickListener {
-            view.findNavController()
+            findNavController()
                 .navigate(R.id.action_shoeListingFragment_to_shoeDetailFragmnet)
         }
         binding.apply {
             toolBar.inflateMenu(R.menu.logout_menu)
             toolBar.setOnMenuItemClickListener {
                 if (it.itemId == R.id.btn_logout) {
-                    findNavController().navigate(R.id.action_shoeListingFragment_to_loginFragment2)
+                    findNavController()
+                        .navigate(R.id.action_shoeListingFragment_to_loginFragment2)
                     //Clear BackStack
                     true
                 } else false

@@ -4,7 +4,7 @@ plugins {
     id("androidx.navigation.safeargs")
 
 }
-
+apply plugin: 'kotlin-kapt'
 android {
     compileSdk 32
 
@@ -38,6 +38,7 @@ android {
     dataBinding {
         enabled = true
     }
+
 }
 
 dependencies {
